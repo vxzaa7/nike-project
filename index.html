@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="./img/Logo.png" alt="Logo by nike" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Content</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="content__txt">
+                <h2>It's not just sneakers<br>
+                It's <span>Nike</span></h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Quisquam odit laborum, ducimus fugiat dolor ad hic 
+                    voluptatem neque temporibus magni.</p>
+                <a href="#">Lean More</a>
+            </div>
+            <div class="content__img">
+                <img src="./img/1-2.png" class="nike">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./img/1.png" alt="" onclick="imgChange('./img/1-2.png');colorChange('#9081a2')"></li>
+            <li><img src="./img/2.png" alt="" onclick="imgChange('./img/2-1.png');colorChange('#fecf5e')"></li>
+            <li><img src="./img/3.png" alt="" onclick="imgChange('./img/3-1.png');colorChange('#dd4257')"></li>
+        </ul>
+        <ul class="scimg">
+            <li><a href="#"><img src="./img/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script>
+        function imgChange(img){
+            document.querySelector('.nike').src = img;
+        }
+        function colorChange(color){
+            const circle = document.querySelector('.circle');
+            const nike = document.querySelector('.content__txt span');
+            const btn = document.querySelector('.content__txt a');
+            console.log();
+            circle.style.background = color;
+            nike.style.color = color;
+            btn.style.background = color;
+        }
+    </script>
+</body>
+</html>
